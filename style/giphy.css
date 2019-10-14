@@ -11,3 +11,19 @@
 #main-title {
     margin-top: 20px;
 }
+
+#search-btn, #user-search {
+    margin-top: 10px;
+}
+
+.topic-button {
+    margin: 10px;
+}
+
+#gif-div {
+    background-color: wheat;
+}
+
+#generated-gif {
+    margin: 10px;
+}

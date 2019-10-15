@@ -19,12 +19,14 @@ $(document).ready(function() {
         // push to topics array
         topics.push(newCar);
         // clearing the div and then run the gif buttons function again
+        $("#user-search").val('');
         $("#gif-buttons").empty();
         gifButtons()
     })
 
     // creating a click listener for the buttons
     $("#gif-buttons").on("click", ".topic-button", function() {
+        $("#gif-div").empty();
         // assigning a data attribute to each button that is clicked
         var cars = $(this).attr("data-car");
         console.log(cars);
@@ -48,16 +50,24 @@ $(document).ready(function() {
                 // creating a p tag to hold each gif rating
                 var ratingP = ("<p> Rating: " + rating + "</p>")
                 // console.log(ratingP)
-                var carImage = $("<img>").attr("src", results[i].images.fixed_height_still.url).attr("data-still", results[i].images.fixed_height_still.url).attr("data-animate", results[i].images.fixed_height.url);
+                //  assigning attributes to the image/gif to call upon for the API
+                var carImage = $("<img>").attr({
+                    "class": "clicked",
+                    "src": results[i].images.fixed_height_still.url,
+                    "data-state": "still",
+                    "data-still": results[i].images.fixed_height_still.url,
+                    "data-animate": results[i].images.fixed_height.url,
+                })
                 // adding the gifs and rating to the JS created div and p tag
                 gifDiv.prepend(ratingP);
                 gifDiv.prepend(carImage);
                 // adding the gifs to the page
                 $("#gif-div").prepend(gifDiv);
               }
-            })
-            // clicks work but it takes 2 clicks to start
-            $(document).on("click", "img", function() {
+
+              // clicks work but it takes 2 clicks to start
+                $(".clicked").on("click", function() {
+                console.log(this);
                 var state = $(this).attr("data-state");
                 if (state === "still") {
                     $(this).attr('src', $(this).attr ("data-animate"));
@@ -66,7 +76,10 @@ $(document).ready(function() {
                     $(this).attr('src', $(this).attr ("data-still"));
                     $(this).attr('data-state', "still");
                   }
+                })
+
             })
+            
     })
 
     

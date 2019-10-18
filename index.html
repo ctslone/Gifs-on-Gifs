@@ -13,6 +13,7 @@
     <!-- personal CSS and reset -->
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/giphy.css">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
     <title>Gifs on Gifs on Gifs</title>
 </head>
 
@@ -20,20 +21,26 @@
     <div class="container">
         <div class="row">
             <div id="main-title" class="col-12 d-flex justify-content-center mx-auto">
-                <h1 id="title" >Jify</h1>
+                <h1 id="title">Jify</h1>
             </div>
+    
         </div>
         <div class="row">
             <div id="gif-buttons" class="col-8">
 
             </div>
             <div id="search" class="col-3 offset-1">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="user-search" placeholder="Jify..." aria-label="Search GIFs"
-                        aria-describedby="main-search">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="search-btn">Search GIFs</button>
+                <div class="row">
+                    <div class=" col-10 mx-auto input-group mb-3">
+                        <input type="text" class="form-control" id="user-search" placeholder="Jify..."
+                            aria-label="Search GIFs" aria-describedby="main-search">
+                        <div class="input-group-append">
+                            <button class="btn btn-danger" type="button" id="search-btn">Search GIFs</button>
+                        </div>
                     </div>
+                </div>
+                <div class="row">
+                    <button id="more-btn" class="mx-auto btn btn-danger" type="button" id="search-btn">Get 10 More!</button>
                 </div>
             </div>
         </div>

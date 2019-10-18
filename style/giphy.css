@@ -1,33 +1,47 @@
+body {
+    background-image: url(../style/geom-background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Mansalva', cursive;
+    font-size: 18px;
+    color: white;
+}
+
 #title {
     background-image: linear-gradient(to right, red 33.33%, blue 33.33%, blue 66.66%, green 66.66%);
     text-shadow: 2px 2px black;
     font-family: 'Erica One', cursive;
     font-size: 80px;
     padding: 10px;
+    margin-top: 10px;
     border-radius: 10px;
     color: white;
 }
 
-h1 {
-    margin-top: 10px;
-}
 #main-title {
     margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.404);
+    background-color: rgb(53, 53, 53);
     border-radius: 10px;
 }
 #search {
     margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.404);
+    background-color: rgb(53, 53, 53);
     border-radius: 10px;
 }
+
+#more-btn {
+    margin-bottom: 10px;
+}
+
 #search-btn, #user-search {
     margin-top: 10px;
 }
 
 #gif-buttons {
     margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.404);
+    background-color: rgb(53, 53, 53);
     border-radius: 10px;
 }
 
@@ -37,7 +51,13 @@ h1 {
 
 #gif-div {
     margin-top: 10px;
-    background-color: wheat;
+    margin-bottom: 10px;
+    background-color: rgb(53, 53, 53);
+    border-radius: 10px;
+}
+
+#rating {
+    color: white;
 }
 
 #generated-gif {

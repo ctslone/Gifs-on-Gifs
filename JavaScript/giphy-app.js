@@ -30,7 +30,7 @@ $(document).ready(function () {
     var lastClick = $(this).attr("data-car"); 
     // assigning a data attribute to each button that is clicked
     var cars = $(this).attr("data-car");
-    console.log(cars);
+    // console.log(cars);
     // assigning a random number to the URL to return "random" gifs of the right category
     var offset = Math.floor(Math.random()*100-0) + 100;
     // defining the url that will be used in the api. created so that each time a user clicks a button, the button data attr is used in the query url
@@ -42,17 +42,17 @@ $(document).ready(function () {
     })
       .then(function (response) {
         var results = response.data;
-        console.log(results);
+        // console.log(results);
 
         for (var i = 0; i < results.length; i++) {
           // creating a div for each image to reside
           var gifDiv = $("<div id='generated-gif' class='float-left'>");
           // storing the rating of each gif in a varible
           var rating = results[i].rating;
-          console.log(rating);
+          // console.log(rating);
           // creating a p tag to hold each gif rating
           var ratingP = ("<p> Rating: " + rating + "</p>")
-          console.log(ratingP)
+          // console.log(ratingP);
           //  assigning attributes to the image/gif to call upon for the API
           var carImage = $("<img>").attr({
             "class": "clicked",
@@ -76,7 +76,7 @@ $(document).ready(function () {
 
         // clicks to start and stop the gifs
         $(".clicked").on("click", function () {
-          console.log(this);
+          // console.log(this);
           var state = $(this).attr("data-state");
           if (state === "still") {
             $(this).attr('src', $(this).attr("data-animate"));
@@ -97,7 +97,7 @@ $(document).ready(function () {
       // I believe the problem lies within the lastClick variable. on the console.log(lastClick), it prints the two last clicked buttons instead of the actual last click.
       // I need to clear that array somehow before it puts the last click value in each time, in order to prevent it from having 2 values in the lastClicked array
       function moreGIFs() {
-        console.log(lastClick);
+        // console.log(lastClick);
         var offset = Math.floor(Math.random()*100-0) + 100;
         // defining the url that will be used in the api. created so that each time a user clicks a button, the button data attr is used in the query url
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + lastClick + "&api_key=ZUploi9XhhDkoDvUWIWS4wvWBsOPVD8T&limit=10&offset="+ offset +"";
@@ -108,14 +108,14 @@ $(document).ready(function () {
         })
           .then(function (response) {
             var results = response.data;
-            console.log(results);
+            // console.log(results);
     
             for (var i = 0; i < results.length; i++) {
               // creating a div for each image to reside
               var gifDiv = $("<div id='generated-gif' class='float-left'>");
               // storing the rating of each gif in a varible
               var rating = results[i].rating;
-              console.log(rating);
+              // console.log(rating);
               // creating a p tag to hold each gif rating
               var ratingP = $("<p id='rating'> Rating: " + rating + "</p>")
               // console.log(ratingP)
@@ -136,7 +136,7 @@ $(document).ready(function () {
     
             // clicks to start and stop the gifs
             $(".clicked").on("click", function () {
-              console.log(this);
+              // console.log(this);
               var state = $(this).attr("data-state");
               if (state === "still") {
                 $(this).attr('src', $(this).attr("data-animate"));
@@ -156,7 +156,7 @@ $(document).ready(function () {
   function gifButtons() {
     for (i = 0; i < topics.length; i++) {
       // checking functionality of the loop
-      console.log(topics[i]);
+      // console.log(topics[i]);
       $("#gif-buttons").append("<button type='button' data-car='" + topics[i] + "'  class='topic-button btn btn-danger'>" + topics[i] + "</button>")
     }
   }

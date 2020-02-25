@@ -2,6 +2,8 @@
 
 Is it 'Gif'? Is it 'Jif'? Whatever you think, this dynamic web application utilizes the GIPHY API to give the user a collection of GIFs of their choosing. Happy Jiffing (or giffing)!
 
+![](style/images/readme.png)
+
 ## Getting Started
 
 Want to try it out?
@@ -28,4 +30,7 @@ A few challenges that I faced when creating this game were:
 
 ## Authors
 
-* Charlie Slone - [GitHub](https://github.com/ctslone) - [LinkedIn](https://www.linkedin.com/in/charlie-slone-704311a9/)
+* Charlie Slone
+    * [GitHub](https://github.com/ctslone)
+    * [LinkedIn](https://www.linkedin.com/in/charlie-slone-704311a9/)
+    * [Portfolio](https://ctslone.github.io/Updated-Portfolio/)
